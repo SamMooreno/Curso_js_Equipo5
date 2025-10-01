@@ -72,5 +72,227 @@
     "imagen": "https://s.yimg.com/ny/api/res/1.2/rP0m0rZ1b3FwkEH_CVJO0w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03MjA-/https://s.yimg.com/os/creatr-uploaded-images/2022-11/c3c99bb0-5c67-11ed-af6f-716a8651bf9d",
     "descripcion": "Diseño minimalista con acabados premium en aluminio y tela, pantalla PixelSense de alta resolución y experiencia Windows optimizada. Ideal para productividad diaria y diseño limpio."
   }
+],
+
+"celulares": [
+  {
+    "id": 1,
+    "nombre": "Google Pixel 8 Pro",
+    "marca": "Google",
+    "procesador": "Google Tensor G3",
+    "ram": "12 GB",
+    "almacenamiento": "128 GB",
+    "sistemaOperativo": "Android 14",
+    "precio": 899,
+    "imagen": "https://images.unsplash.com/photo-1695175731795-9a4a4e8f1c5d?auto=format&fit=crop&w=600",
+    "descripcion": "Cámara fotográfica de alta gama con procesamiento de IA, pantalla brillante de 120 Hz y actualizaciones de software garantizadas por 7 años. Ideal para amantes de la fotografía móvil y el ecosistema Android puro."
+  },
+  {
+    "id": 2,
+    "nombre": "Samsung Galaxy S24 Ultra",
+    "marca": "Samsung",
+    "procesador": "Snapdragon 8 Gen 3",
+    "ram": "12 GB",
+    "almacenamiento": "256 GB",
+    "sistemaOperativo": "Android 14 con One UI 6",
+    "precio": 1199,
+    "imagen": "https://images.unsplash.com/photo-1693272877019-2d8e4c7a4e8d?auto=format&fit=crop&w=600",
+    "descripcion": "El buque insignia de Samsung con S Pen integrado, cámara de 200 MP, pantalla Dynamic AMOLED 2X y rendimiento de élite. Perfecto para creadores, profesionales y entusiastas de la tecnología."
+  },
+  {
+    "id": 3,
+    "nombre": "Motorola Edge 40 Pro",
+    "marca": "Motorola",
+    "procesador": "Snapdragon 8 Gen 2",
+    "ram": "12 GB",
+    "almacenamiento": "512 GB",
+    "sistemaOperativo": "Android 13",
+    "precio": 799,
+    "imagen": "https://images.unsplash.com/photo-1683083822583-87615e1d6e72?auto=format&fit=crop&w=600",
+    "descripcion": "Diseño elegante con carga ultrarrápida, pantalla curva de 165 Hz y una experiencia Android limpia. Ofrece potencia premium a un precio competitivo."
+  },
+  {
+    "id": 4,
+    "nombre": "iPhone 15 Pro",
+    "marca": "Apple",
+    "procesador": "A17 Pro chip",
+    "ram": "8 GB",
+    "almacenamiento": "256 GB",
+    "sistemaOperativo": "iOS 17",
+    "precio": 1099,
+    "imagen": "https://images.unsplash.com/photo-1694538103292-5b6c0a7e0a5f?auto=format&fit=crop&w=600",
+    "descripcion": "Construcción en titanio, cámara Pro de 48 MP y el chip A17 Pro más potente hasta la fecha. Ideal para usuarios que buscan rendimiento, calidad fotográfica y ecosistema Apple integrado."
+  },
+  {
+    "id": 5,
+    "nombre": "Xiaomi 14 Ultra",
+    "marca": "Xiaomi",
+    "procesador": "Snapdragon 8 Gen 3",
+    "ram": "16 GB",
+    "almacenamiento": "512 GB",
+    "sistemaOperativo": "Android 14 con HyperOS",
+    "precio": 999,
+    "imagen": "https://images.unsplash.com/photo-1695175731795-9a4a4e8f1c5d?auto=format&fit=crop&w=600",
+    "descripcion": "Colaboración con Leica en su sistema de cámaras cuádruple, pantalla LTPO AMOLED de 120 Hz y batería de larga duración. Un monstruo fotográfico y de rendimiento."
+  },
+  {
+    "id": 6,
+    "nombre": "OnePlus 12",
+    "marca": "OnePlus",
+    "procesador": "Snapdragon 8 Gen 3",
+    "ram": "12 GB",
+    "almacenamiento": "256 GB",
+    "sistemaOperativo": "OxygenOS basado en Android 14",
+    "precio": 749,
+    "imagen": "https://images.unsplash.com/photo-1683083822583-87615e1d6e72?auto=format&fit=crop&w=600",
+    "descripcion": "Rendimiento fluido, carga Warp extremadamente rápida y una pantalla Fluid AMOLED de 120 Hz. Diseñado para quienes buscan velocidad, calidad y valor sin sacrificar experiencia premium."
+  }
+], 
+"redes": [
+  {
+    "id": 1,
+    "nombre": "Cisco Catalyst 2960-L Switch",
+    "marca": "Cisco",
+    "tipo": "Switch gestionable",
+    "puertos": "24 puertos Gigabit Ethernet",
+    "capacidad": "50 Gbps de ancho de banda",
+    "gestion": "Sí (web y CLI)",
+    "precio": 399,
+    "imagen": "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=600",
+    "descripcion": "Switch empresarial de Cisco con gestión avanzada, ideal para redes medianas. Ofrece alta disponibilidad, seguridad integrada y fácil administración para entornos profesionales."
+  },
+  {
+    "id": 2,
+    "nombre": "TP-Link Archer AX90",
+    "marca": "TP-Link",
+    "tipo": "Router Wi-Fi 6",
+    "velocidad": "6600 Mbps",
+    "bandas": "Triple banda (2.4 GHz + 5 GHz + 5 GHz adicional)",
+    "puertos": "1 WAN + 4 LAN Gigabit + 1 puerto 2.5G",
+    "precio": 299,
+    "imagen": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=600",
+    "descripcion": "Router de alto rendimiento con Wi-Fi 6, ideal para hogares inteligentes y oficinas pequeñas. Soporta decenas de dispositivos simultáneos con baja latencia y cobertura extendida."
+  },
+  {
+    "id": 3,
+    "nombre": "Patch Panel Cat6 24 Puertos",
+    "marca": "Ubiquiti",
+    "tipo": "Panel de parcheo",
+    "puertos": "24 puertos RJ45 Cat6",
+    "montaje": "Estándar 19 pulgadas",
+    "material": "Chasis metálico con blindaje",
+    "precio": 89,
+    "imagen": "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?auto=format&fit=crop&w=600",
+    "descripcion": "Panel de parcheo profesional para organización de cableado estructurado. Compatible con redes Gigabit y diseñado para racks estándar. Esencial en instalaciones de red ordenadas y escalables."
+  },
+  {
+    "id": 4,
+    "nombre": "Cisco Firepower 1010",
+    "marca": "Cisco",
+    "tipo": "Firewall de próxima generación",
+    "throughput": "1 Gbps",
+    "funciones": "IPS, control de aplicaciones, filtrado de URL, VPN",
+    "gestion": "Centralizada vía Cisco Defense Orchestrator",
+    "precio": 899,
+    "imagen": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600",
+    "descripcion": "Firewall empresarial con protección avanzada contra amenazas, ideal para PYMES. Incluye inspección profunda de paquetes, prevención de intrusiones y seguridad en la nube."
+  },
+  {
+    "id": 5,
+    "nombre": "Ubiquiti UniFi U6-Pro Access Point",
+    "marca": "Ubiquiti",
+    "tipo": "Punto de acceso inalámbrico",
+    "estándar": "Wi-Fi 6 (802.11ax)",
+    "velocidad": "3500 Mbps",
+    "cobertura": "Hasta 180 m²",
+    "precio": 199,
+    "imagen": "https://images.unsplash.com/photo-1551836022-d5d88e92113f?auto=format&fit=crop&w=600",
+    "descripcion": "Punto de acceso profesional con Wi-Fi 6, gestión centralizada y diseño elegante. Perfecto para oficinas, hoteles o campus que requieren conectividad estable y de alta densidad."
+  },
+  {
+    "id": 6,
+    "nombre": "Netgear Nighthawk C7800",
+    "marca": "Netgear",
+    "tipo": "Módem-router combinado",
+    "tecnologia": "Cable DOCSIS 3.1 + Wi-Fi 6",
+    "velocidad": "Hasta 8 Gbps",
+    "puertos": "2 puertos Gigabit + 1 puerto 2.5G",
+    "precio": 349,
+    "imagen": "https://images.unsplash.com/photo-1581235746123-5e9a9a1a6e8f?auto=format&fit=crop&w=600",
+    "descripcion": "Todo en uno: módem de cable de última generación y router Wi-Fi 6. Elimina la necesidad de alquilar equipos de tu proveedor de internet y ofrece rendimiento óptimo para streaming, gaming y trabajo remoto."
+  }
+], 
+"gadgets": [
+  {
+    "id": 1,
+    "nombre": "Sony WH-1000XM5",
+    "marca": "Sony",
+    "tipo": "Audífonos inalámbricos con cancelación de ruido",
+    "conectividad": "Bluetooth 5.2, NFC",
+    "bateria": "Hasta 30 horas",
+    "precio": 349,
+    "imagen": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600",
+    "descripcion": "Audífonos premium con cancelación de ruido líder en la industria, sonido de alta resolución y micrófonos avanzados para llamadas claras. Ideales para viajes, trabajo remoto y disfrute de música inmersiva."
+  },
+  {
+    "id": 2,
+    "nombre": "Teclado Mecánico Razer BlackWidow V4",
+    "marca": "Razer",
+    "tipo": "Teclado gaming mecánico",
+    "switches": "Razer Green (táctiles y ruidosos)",
+    "iluminacion": "RGB personalizable",
+    "conectividad": "USB-C desmontable",
+    "precio": 169,
+    "imagen": "https://images.unsplash.com/photo-1593642702700-0b0d0e9e8b8c?auto=format&fit=crop&w=600",
+    "descripcion": "Diseñado para jugadores exigentes, con switches mecánicos duraderos, teclas programables y retroiluminación RGB. Ofrece respuesta rápida, ergonomía y estilo para tu setup de juego o trabajo."
+  },
+  {
+    "id": 3,
+    "nombre": "Logitech G Pro X Superlight",
+    "marca": "Logitech",
+    "tipo": "Mouse inalámbrico para gaming",
+    "peso": "Menos de 63 gramos",
+    "dpi": "Hasta 25,600 DPI",
+    "bateria": "Hasta 70 horas",
+    "precio": 129,
+    "imagen": "https://images.unsplash.com/photo-1587825140708-dfaf4b2e9a0a?auto=format&fit=crop&w=600",
+    "descripcion": "Mouse ultraligero y preciso, favorito de jugadores profesionales. Con sensor HERO de alto rendimiento, sin cables que limiten tu movimiento y diseño ergonómico para sesiones largas."
+  },
+  {
+    "id": 4,
+    "nombre": "Cámara Web Logitech Brio 4K",
+    "marca": "Logitech",
+    "tipo": "Cámara web profesional",
+    "resolucion": "4K Ultra HD a 30 fps",
+    "caracteristicas": "HDR, enfoque automático, corrección de luz, micrófonos duales",
+    "compatibilidad": "Windows, macOS, Zoom, Teams, etc.",
+    "precio": 199,
+    "imagen": "https://images.unsplash.com/photo-1589398400714-d227c2a8e4b3?auto=format&fit=crop&w=600",
+    "descripcion": "Cámara web de alta gama para streaming, videollamadas y contenido profesional. Entrega imagen nítida incluso en condiciones de poca luz, ideal para creadores y profesionales remotos."
+  },
+  {
+    "id": 5,
+    "nombre": "Memoria USB SanDisk Extreme Pro 256 GB",
+    "marca": "SanDisk",
+    "tipo": "Memoria flash USB 3.2",
+    "capacidad": "256 GB",
+    "velocidad": "Lectura hasta 420 MB/s",
+    "resistencia": "Resistente al agua, golpes y temperatura",
+    "precio": 49,
+    "imagen": "https://images.unsplash.com/photo-1588871052493-883785d4d8e5?auto=format&fit=crop&w=600",
+    "descripcion": "Memoria USB ultrarrápida y robusta, perfecta para transferir archivos grandes en segundos. Ideal para fotógrafos, estudiantes y profesionales que necesitan movilidad y seguridad de datos."
+  },
+  {
+    "id": 6,
+  "nombre": "Micrófono Blue Yeti USB",
+  "marca": "Blue",
+  "tipo": "Micrófono de condensador USB",
+  "patronPolar": "Múltiples modos (cardioide, estéreo, omnidireccional, bidireccional)",
+  "resolucion": "Hasta 48 kHz / 16-bit",
+  "conectividad": "USB plug-and-play",
+  "precio": 129,
+  "imagen": "https://images.unsplash.com/photo-1588871052493-883785d4d8e5?auto=format&fit=crop&w=600",
+  "descripcion": "Micrófono profesional ideal para streaming, podcasting, grabación de voz y videollamadas de alta calidad. Fácil de usar, con controles integrados y soporte ajustable. Perfecto para creadores de contenido y profesionales del audio."
+  }
 ]
 }

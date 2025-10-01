@@ -45,5 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarProductos("celulares");
   } else if (pagina.includes("gadgets.html")) {
     cargarProductos("gadgets");
+  }else if(pagina.includes("redes.html")){
+    cargarProductos("redes")
   }
 });
