@@ -1,0 +1,76 @@
+{
+"laptops": [
+  {
+    "id": 1,
+    "nombre": "MacBook Air M2",
+    "marca": "Apple",
+    "procesador": "Apple M2 chip",
+    "ram": "8 GB",
+    "almacenamiento": "256 GB SSD",
+    "sistemaOperativo": "macOS Ventura",
+    "precio": 1199,
+    "imagen": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600",
+    "descripcion": "Diseño ultradelgado con el potente chip M2 de Apple, ideal para productividad diaria, edición ligera y largas horas de batería. Perfecta para estudiantes y profesionales móviles."
+  },
+  {
+    "id": 2,
+    "nombre": "Dell XPS 13",
+    "marca": "Dell",
+    "procesador": "Intel Core i7-1260P",
+    "ram": "16 GB",
+    "almacenamiento": "512 GB SSD",
+    "sistemaOperativo": "Windows 11 Pro",
+    "precio": 1299,
+    "imagen": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600",
+    "descripcion": "Una de las laptops más compactas y potentes del mercado, con pantalla InfinityEdge, excelente rendimiento y construcción premium en aluminio y fibra de carbono."
+  },
+  {
+    "id": 3,
+    "nombre": "Lenovo ThinkPad X1 Carbon",
+    "marca": "Lenovo",
+    "procesador": "Intel Core i5-1240P",
+    "ram": "16 GB",
+    "almacenamiento": "512 GB SSD",
+    "sistemaOperativo": "Windows 11 Pro",
+    "precio": 1399,
+    "imagen": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600",
+    "descripcion": "Laptop empresarial por excelencia: ligera, resistente, con teclado cómodo y seguridad avanzada. Ideal para ejecutivos y entornos profesionales exigentes."
+  },
+  {
+    "id": 4,
+    "nombre": "HP Spectre x360",
+    "marca": "HP",
+    "procesador": "Intel Core i7-1255U",
+    "ram": "16 GB",
+    "almacenamiento": "1 TB SSD",
+    "sistemaOperativo": "Windows 11 Home",
+    "precio": 1249,
+    "imagen":"https://d598hd2wips7r.cloudfront.net/magefan_blog/hero-spectre-x360.jpg",
+    "descripcion": "Convertible elegante con pantalla táctil 4K opcional, sonido premium y batería de larga duración. Perfecta para creadores y usuarios que buscan versatilidad."
+  },
+  {
+    "id": 5,
+    "nombre": "Asus ZenBook 14",
+    "marca": "Asus",
+    "procesador": "AMD Ryzen 7 6800U",
+    "ram": "16 GB",
+    "almacenamiento": "512 GB SSD",
+    "sistemaOperativo": "Windows 11 Home",
+    "precio": 899,
+    "imagen": "https://laptopmedia.com/wp-content/uploads/2021/09/2-6-e1630683013268.jpg",
+    "descripcion": "Potencia y portabilidad en un cuerpo compacto. Con procesador AMD Ryzen de alto rendimiento y diseño elegante, es ideal para trabajo y entretenimiento sin compromisos."
+  },
+  {
+    "id": 6,
+    "nombre": "Microsoft Surface Laptop 5",
+    "marca": "Microsoft",
+    "procesador": "Intel Core i5-1235U",
+    "ram": "8 GB",
+    "almacenamiento": "256 GB SSD",
+    "sistemaOperativo": "Windows 11 Home",
+    "precio": 999,
+    "imagen": "https://s.yimg.com/ny/api/res/1.2/rP0m0rZ1b3FwkEH_CVJO0w--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03MjA-/https://s.yimg.com/os/creatr-uploaded-images/2022-11/c3c99bb0-5c67-11ed-af6f-716a8651bf9d",
+    "descripcion": "Diseño minimalista con acabados premium en aluminio y tela, pantalla PixelSense de alta resolución y experiencia Windows optimizada. Ideal para productividad diaria y diseño limpio."
+  }
+]
+}
