@@ -18,21 +18,41 @@ async function cargarProductos(categoria) {
 // Función para renderizar productos en HTML
 function renderizarProductos(productos) {
   const main = document.querySelector("#product-list");
-  const dataMain = productos.map(producto => {
-    return `<div class="col-md-4">
-              <div class="card h-100">
-                <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
-                <div class="card-body">
-                  <h5 class="card-title">${producto.nombre}</h5>
-                  <h6> $${producto.precio} dolares</h6>
-                  <p class="card-text">${producto.descripcion || ""}</p>
-                  <a href="#" class="btn btn-primary">Comprar</a> 
-                </div>
-              </div>
-            </div>`;
-  }).join("");
 
-  main.innerHTML = dataMain;
+  const dataMain = productos.map((producto) => {
+    let detalles = "";
+    for (let key in producto) {
+      if (["id", "nombre", "precio", "descripcion", "imagen"].includes(key)) continue;
+      detalles += `<li class="list-group-item">${key}: ${producto[key]}</li>`;
+    }
+
+    return `
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+          <div class="card-body">
+            <h5 class="card-title">${producto.nombre}</h5>
+            <h6 class="text-muted">$${producto.precio || ""} dolares</h6>
+            <p class="card-text">${producto.descripcion || ""}</p>
+            
+            <!-- Botón que despliega -->
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#detalle-${producto.id}" role="button">
+              Ver más
+            </a>
+
+            <!-- Contenido colapsable dinámico -->
+            <div class="collapse mt-2" id="detalle-${producto.id}">
+              <ul class="list-group list-group-flush">
+                ${detalles}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  main.innerHTML = dataMain.join("");
 }
 
 // Detectar la página y cargar la categoría correspondiente
@@ -45,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cargarProductos("celulares");
   } else if (pagina.includes("gadgets.html")) {
     cargarProductos("gadgets");
-  }else if(pagina.includes("redes.html")){
-    cargarProductos("redes")
+  } else if (pagina.includes("redes.html")) {
+    cargarProductos("redes");
   }
 });
