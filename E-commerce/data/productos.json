@@ -73,7 +73,6 @@
     "descripcion": "Diseño minimalista con acabados premium en aluminio y tela, pantalla PixelSense de alta resolución y experiencia Windows optimizada. Ideal para productividad diaria y diseño limpio."
   }
 ],
-
 "celulares": [
   {
     "id": 1,
@@ -84,7 +83,7 @@
     "almacenamiento": "128 GB",
     "sistemaOperativo": "Android 14",
     "precio": 899,
-    "imagen": "https://images.unsplash.com/photo-1695175731795-9a4a4e8f1c5d?auto=format&fit=crop&w=600",
+    "imagen": "https://cdn.mos.cms.futurecdn.net/54gocRCNqwcjfeKc8C4E8W.jpg",
     "descripcion": "Cámara fotográfica de alta gama con procesamiento de IA, pantalla brillante de 120 Hz y actualizaciones de software garantizadas por 7 años. Ideal para amantes de la fotografía móvil y el ecosistema Android puro."
   },
   {
@@ -96,7 +95,7 @@
     "almacenamiento": "256 GB",
     "sistemaOperativo": "Android 14 con One UI 6",
     "precio": 1199,
-    "imagen": "https://images.unsplash.com/photo-1693272877019-2d8e4c7a4e8d?auto=format&fit=crop&w=600",
+    "imagen": "https://cdn.futura-sciences.com/cdn-cgi/image/width=1024,quality=50,format=auto/sources/images/galaxy-s23-ultra.jpeg",
     "descripcion": "El buque insignia de Samsung con S Pen integrado, cámara de 200 MP, pantalla Dynamic AMOLED 2X y rendimiento de élite. Perfecto para creadores, profesionales y entusiastas de la tecnología."
   },
   {
@@ -108,7 +107,7 @@
     "almacenamiento": "512 GB",
     "sistemaOperativo": "Android 13",
     "precio": 799,
-    "imagen": "https://images.unsplash.com/photo-1683083822583-87615e1d6e72?auto=format&fit=crop&w=600",
+    "imagen": "https://www.stuff.tv/wp-content/uploads/sites/2/2023/05/Motorola-Edge-40-review-in-hand-rear.jpg",
     "descripcion": "Diseño elegante con carga ultrarrápida, pantalla curva de 165 Hz y una experiencia Android limpia. Ofrece potencia premium a un precio competitivo."
   },
   {
@@ -120,7 +119,7 @@
     "almacenamiento": "256 GB",
     "sistemaOperativo": "iOS 17",
     "precio": 1099,
-    "imagen": "https://images.unsplash.com/photo-1694538103292-5b6c0a7e0a5f?auto=format&fit=crop&w=600",
+    "imagen": "https://tse3.mm.bing.net/th/id/OIP.yST0varv4jKTjgdOmxaO_gHaE7?cb=12&w=920&h=613&rs=1&pid=ImgDetMain&o=7&rm=3",
     "descripcion": "Construcción en titanio, cámara Pro de 48 MP y el chip A17 Pro más potente hasta la fecha. Ideal para usuarios que buscan rendimiento, calidad fotográfica y ecosistema Apple integrado."
   },
   {
@@ -132,7 +131,7 @@
     "almacenamiento": "512 GB",
     "sistemaOperativo": "Android 14 con HyperOS",
     "precio": 999,
-    "imagen": "https://images.unsplash.com/photo-1695175731795-9a4a4e8f1c5d?auto=format&fit=crop&w=600",
+    "imagen": "https://www.androidplanet.nl/wp-content/uploads/2024/02/xiaomi-14-ultra-header.jpg",
     "descripcion": "Colaboración con Leica en su sistema de cámaras cuádruple, pantalla LTPO AMOLED de 120 Hz y batería de larga duración. Un monstruo fotográfico y de rendimiento."
   },
   {
@@ -144,7 +143,7 @@
     "almacenamiento": "256 GB",
     "sistemaOperativo": "OxygenOS basado en Android 14",
     "precio": 749,
-    "imagen": "https://images.unsplash.com/photo-1683083822583-87615e1d6e72?auto=format&fit=crop&w=600",
+    "imagen": "https://fossbytes.com/wp-content/uploads/2023/12/photo-of-OnePlus-12-in-green-1024x574.webp",
     "descripcion": "Rendimiento fluido, carga Warp extremadamente rápida y una pantalla Fluid AMOLED de 120 Hz. Diseñado para quienes buscan velocidad, calidad y valor sin sacrificar experiencia premium."
   }
 ], 
@@ -158,7 +157,7 @@
     "capacidad": "50 Gbps de ancho de banda",
     "gestion": "Sí (web y CLI)",
     "precio": 399,
-    "imagen": "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=600",
+    "imagen": "https://www.tonitrus.com/media/image/7b/14/c9/cisco-ws-c2960l-16ts-ll-10121727.jpg",
     "descripcion": "Switch empresarial de Cisco con gestión avanzada, ideal para redes medianas. Ofrece alta disponibilidad, seguridad integrada y fácil administración para entornos profesionales."
   },
   {
@@ -170,7 +169,7 @@
     "bandas": "Triple banda (2.4 GHz + 5 GHz + 5 GHz adicional)",
     "puertos": "1 WAN + 4 LAN Gigabit + 1 puerto 2.5G",
     "precio": 299,
-    "imagen": "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=600",
+    "imagen": "https://th.bing.com/th/id/R.0de2cd4bd8974a83f532a30279e8ba3c?rik=m0osy%2fXmp8KhWw&pid=ImgRaw&r=0",
     "descripcion": "Router de alto rendimiento con Wi-Fi 6, ideal para hogares inteligentes y oficinas pequeñas. Soporta decenas de dispositivos simultáneos con baja latencia y cobertura extendida."
   },
   {
@@ -182,7 +181,7 @@
     "montaje": "Estándar 19 pulgadas",
     "material": "Chasis metálico con blindaje",
     "precio": 89,
-    "imagen": "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?auto=format&fit=crop&w=600",
+    "imagen": "https://americanteledatastore.com/wp-content/uploads/2019/01/CAT-6-24-Port-Shielded-Patch-Panel-Angled-View.jpg",
     "descripcion": "Panel de parcheo profesional para organización de cableado estructurado. Compatible con redes Gigabit y diseñado para racks estándar. Esencial en instalaciones de red ordenadas y escalables."
   },
   {
@@ -194,7 +193,7 @@
     "funciones": "IPS, control de aplicaciones, filtrado de URL, VPN",
     "gestion": "Centralizada vía Cisco Defense Orchestrator",
     "precio": 899,
-    "imagen": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600",
+    "imagen": "https://cdn11.bigcommerce.com/s-46jufh/images/stencil/1280x1280/products/1857832/2119249/s-l500__49848.1714171178.jpg?c=2?imbypass=on",
     "descripcion": "Firewall empresarial con protección avanzada contra amenazas, ideal para PYMES. Incluye inspección profunda de paquetes, prevención de intrusiones y seguridad en la nube."
   },
   {
@@ -206,7 +205,7 @@
     "velocidad": "3500 Mbps",
     "cobertura": "Hasta 180 m²",
     "precio": 199,
-    "imagen": "https://images.unsplash.com/photo-1551836022-d5d88e92113f?auto=format&fit=crop&w=600",
+    "imagen": "https://www.ubiquitishopkenya.co.ke/wp-content/uploads/2021/06/Ubiquiti-UniFi-UAP-AC-Pro-Indoor-Outdoor-Access-Point-UAP-AC-PRO-2048x2048.jpg",
     "descripcion": "Punto de acceso profesional con Wi-Fi 6, gestión centralizada y diseño elegante. Perfecto para oficinas, hoteles o campus que requieren conectividad estable y de alta densidad."
   },
   {
@@ -218,7 +217,7 @@
     "velocidad": "Hasta 8 Gbps",
     "puertos": "2 puertos Gigabit + 1 puerto 2.5G",
     "precio": 349,
-    "imagen": "https://images.unsplash.com/photo-1581235746123-5e9a9a1a6e8f?auto=format&fit=crop&w=600",
+    "imagen": "https://tse1.mm.bing.net/th/id/OIP.NiiNzT7nHGLvaGZo4aJHGAHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
     "descripcion": "Todo en uno: módem de cable de última generación y router Wi-Fi 6. Elimina la necesidad de alquilar equipos de tu proveedor de internet y ofrece rendimiento óptimo para streaming, gaming y trabajo remoto."
   }
 ], 
@@ -231,7 +230,7 @@
     "conectividad": "Bluetooth 5.2, NFC",
     "bateria": "Hasta 30 horas",
     "precio": 349,
-    "imagen": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600",
+    "imagen": "https://helios-i.mashable.com/imagery/reviews/01HUTTQhSs8SWLx3ouc0f7q/images-3.fill.size_1400x788.v1653070267.jpg",
     "descripcion": "Audífonos premium con cancelación de ruido líder en la industria, sonido de alta resolución y micrófonos avanzados para llamadas claras. Ideales para viajes, trabajo remoto y disfrute de música inmersiva."
   },
   {
@@ -243,7 +242,7 @@
     "iluminacion": "RGB personalizable",
     "conectividad": "USB-C desmontable",
     "precio": 169,
-    "imagen": "https://images.unsplash.com/photo-1593642702700-0b0d0e9e8b8c?auto=format&fit=crop&w=600",
+    "imagen": "https://www.notebookcheck.org/fileadmin/Notebooks/News/_nc4/https___hybrismediaprod.blob.core.windows.net_sys-master-phoenix-images-container_h48_hd3_9815506976798_240912-bw-v4-pro-75-black-1500x1000-1.jpg",
     "descripcion": "Diseñado para jugadores exigentes, con switches mecánicos duraderos, teclas programables y retroiluminación RGB. Ofrece respuesta rápida, ergonomía y estilo para tu setup de juego o trabajo."
   },
   {
@@ -255,7 +254,7 @@
     "dpi": "Hasta 25,600 DPI",
     "bateria": "Hasta 70 horas",
     "precio": 129,
-    "imagen": "https://images.unsplash.com/photo-1587825140708-dfaf4b2e9a0a?auto=format&fit=crop&w=600",
+    "imagen": "https://i.rtings.com/assets/products/L0FFdXlU/logitech-g-pro-x-superlight-2/design-large.jpg?format=auto",
     "descripcion": "Mouse ultraligero y preciso, favorito de jugadores profesionales. Con sensor HERO de alto rendimiento, sin cables que limiten tu movimiento y diseño ergonómico para sesiones largas."
   },
   {
@@ -267,7 +266,7 @@
     "caracteristicas": "HDR, enfoque automático, corrección de luz, micrófonos duales",
     "compatibilidad": "Windows, macOS, Zoom, Teams, etc.",
     "precio": 199,
-    "imagen": "https://images.unsplash.com/photo-1589398400714-d227c2a8e4b3?auto=format&fit=crop&w=600",
+    "imagen": "https://vivadigital.com.co/img/products/Cmara_Web_Logitech_Brio_4K/Camara_web_brio_4k16494536254.jpg",
     "descripcion": "Cámara web de alta gama para streaming, videollamadas y contenido profesional. Entrega imagen nítida incluso en condiciones de poca luz, ideal para creadores y profesionales remotos."
   },
   {
@@ -279,7 +278,7 @@
     "velocidad": "Lectura hasta 420 MB/s",
     "resistencia": "Resistente al agua, golpes y temperatura",
     "precio": 49,
-    "imagen": "https://images.unsplash.com/photo-1588871052493-883785d4d8e5?auto=format&fit=crop&w=600",
+    "imagen": "https://d.scdn.gr/images/sku_main_images/010874/10874708/20211104102206_sandisk_extreme_pro_256gb_usb_3_1.jpeg",
     "descripcion": "Memoria USB ultrarrápida y robusta, perfecta para transferir archivos grandes en segundos. Ideal para fotógrafos, estudiantes y profesionales que necesitan movilidad y seguridad de datos."
   },
   {
@@ -291,7 +290,7 @@
   "resolucion": "Hasta 48 kHz / 16-bit",
   "conectividad": "USB plug-and-play",
   "precio": 129,
-  "imagen": "https://images.unsplash.com/photo-1588871052493-883785d4d8e5?auto=format&fit=crop&w=600",
+  "imagen": "https://megacomputer.com.co/wp-content/uploads/2022/05/Microfono-Blue-Yeti-USB-Profesional-Blackout.jpg",
   "descripcion": "Micrófono profesional ideal para streaming, podcasting, grabación de voz y videollamadas de alta calidad. Fácil de usar, con controles integrados y soporte ajustable. Perfecto para creadores de contenido y profesionales del audio."
   }
 ]
