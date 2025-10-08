@@ -1,1 +1,0 @@
-const arr = ["manzana" , "banana", "leche","chocolate", "coca"]
