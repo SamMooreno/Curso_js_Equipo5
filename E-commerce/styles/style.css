@@ -1,0 +1,6 @@
+.card img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;  /* opcional para que no quede demasiado grande */
+  object-fit: contain; /* ajusta la imagen dentro de la card sin recortar */
+}
