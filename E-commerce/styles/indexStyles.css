@@ -43,6 +43,19 @@ h1 {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+.categoria-card {
+  height: 100%; /* Hace que todas las tarjetas tengan la misma altura */
+  max-width: 300px; 
+  margin: 0 auto; /* Centra las tarjetas en su columna */
+}
+
+.categoria-card img {
+  height: 300px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Recorta sin deformar */
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
 footer {
     text-align: center;
     padding: 20px;
