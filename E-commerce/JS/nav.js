@@ -39,11 +39,24 @@ nav.innerHTML = `
         </li>
       </ul>
 
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
+      <form class="d-flex" role="search" id="form-busqueda">
+        <input id="input-busqueda" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Buscar</button>
       </form>
     </div>
   </div>
 </nav>
 `;
+
+// Capturar el formulario de búsqueda
+const formBusqueda = document.querySelector("#form-busqueda");
+const inputBusqueda = document.querySelector("#input-busqueda");
+
+formBusqueda.addEventListener("submit", (event) => {
+  event.preventDefault(); 
+
+  const termino = inputBusqueda.value.trim().toLowerCase(); 
+  if (termino) {
+    window.location.href = `resultados.html?busqueda=${encodeURIComponent(termino)}`;
+  }
+});
