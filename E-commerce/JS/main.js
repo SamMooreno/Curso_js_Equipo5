@@ -1,18 +1,9 @@
-// Cargar Productos JSON
 async function cargarProductos(categoria) {
-  try {
-    const response = await fetch("./data/productos.json");
-    if (!response.ok) throw new Error("No se pudo cargar el JSON");
-
-    const data = await response.json();
-    const productos = data[categoria];
-    console.log("Productos de " + categoria + ":", productos);
-
-    renderizarProductos(productos);
-    return productos;
-  } catch (error) {
-    console.error("Error al cargar los productos:", error);
-  }
+  const respuesta = await fetch("./data/productos.json");
+  const datos = await respuesta.json();
+  const productos = datos[categoria];
+  renderizarProductos(productos);
+  return productos
 }
 
 // Función para renderizar productos en HTML
@@ -35,12 +26,9 @@ function renderizarProductos(productos) {
             <h6 class="text-muted">$${producto.precio || ""} dolares</h6>
             <p class="card-text">${producto.descripcion || ""}</p>
             
-            <!-- Botón que despliega -->
             <a class="btn btn-primary" data-bs-toggle="collapse" href="#detalle-${producto.id}" role="button">
               Ver más
             </a>
-
-            <!-- Contenido colapsable dinámico -->
             <div class="collapse mt-2" id="detalle-${producto.id}">
               <ul class="list-group list-group-flush">
                 ${detalles}
@@ -55,10 +43,23 @@ function renderizarProductos(productos) {
   main.innerHTML = dataMain.join("");
 }
 
+// --Evento boton de especificaciones--
+document.addEventListener("DOMContentLoaded", function () {
+  // Escucha CUANDO se abra un panel (evento de Bootstrap)
+  document.addEventListener("shown.bs.collapse", function (e) {
+    const boton = document.querySelector(`[href="#${e.target.id}"], [data-bs-target="#${e.target.id}"]`);
+    if (boton) boton.textContent = "Ver menos";
+  });
+  // Escucha CUANDO se cierre un panel
+  document.addEventListener("hidden.bs.collapse", function (e) {
+    const boton = document.querySelector(`[href="#${e.target.id}"], [data-bs-target="#${e.target.id}"]`);
+    if (boton) boton.textContent = "Ver más";
+  });
+});
+
 // Detectar la página y cargar la categoría correspondiente
 document.addEventListener("DOMContentLoaded", () => {
   const pagina = window.location.pathname;
-
   if (pagina.includes("laptops.html")) {
     cargarProductos("laptops");
   } else if (pagina.includes("celulares.html")) {

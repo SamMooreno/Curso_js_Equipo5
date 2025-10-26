@@ -1,11 +1,9 @@
 const nav = document.querySelector("#navbar_m");
 
-
 let enlaces = [
   {nombre: "Home", archivo: "index.html"},
   {nombre: "Ver carrito", archivo: "#"}
 ];
-
 
 let categorias = [
   {nombre: "Laptops", archivo: "laptops.html"},
@@ -43,20 +41,103 @@ nav.innerHTML = `
         <input id="input-busqueda" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit">Buscar</button>
       </form>
+
+      <div id="sesion"></div>
+
     </div>
   </div>
 </nav>
 `;
 
-// Capturar el formulario de búsqueda
+// Autenticación de la sesión
+const authSection = document.querySelector("#sesion");
+authSection.innerHTML = `<div class="menu-usuario">
+    ${localStorage.getItem("nombre")
+      ? `<span>${localStorage.getItem("nombre")}</span>
+         <ul>
+           <li><a onclick="closeSesion()" type="submit" >Cerrar sesión</a></li>
+         </ul>`
+      : `<a href="login.html">Iniciar sesión</a>`
+    }
+  </div>`;
+
+function closeSesion(){
+  localStorage.clear();
+  location.href = "index.html";
+}
+
+// --- BUSQUEDA ---
 const formBusqueda = document.querySelector("#form-busqueda");
 const inputBusqueda = document.querySelector("#input-busqueda");
+const mainContent = document.querySelector("#main-content");
+const contenedorResultados = document.querySelector("#resultado-busqueda");
 
-formBusqueda.addEventListener("submit", (event) => {
-  event.preventDefault(); 
+formBusqueda.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const termino = inputBusqueda.value.trim().toLowerCase();
+  if (!termino) return;
 
-  const termino = inputBusqueda.value.trim().toLowerCase(); 
-  if (termino) {
-    window.location.href = `resultados.html?busqueda=${encodeURIComponent(termino)}`;
+  const respuesta = await fetch("./data/productos.json");
+  const datos = await respuesta.json();
+
+  let resultados = [];
+
+  // Buscar en todas las categorías
+  for (let categoria in datos) {
+    const encontrados = datos[categoria].filter(p =>
+      p.nombre.toLowerCase().includes(termino) ||
+      p.marca?.toLowerCase().includes(termino)
+    );
+    resultados = resultados.concat(encontrados);
+  }
+
+  // Ocultar contenido principal y mostrar resultados
+  mainContent.style.display = "none";
+  renderizarBusqueda(resultados);
+});
+
+// Función para mostrar los resultados
+function renderizarBusqueda(productos) {
+  if (productos.length === 0) {
+    contenedorResultados.innerHTML = `<h2><center>No se encontraron resultados.</center></h2>`;
+    return;
+  }
+
+  contenedorResultados.innerHTML = productos.map(producto => {
+    let detalles = "";
+    for (let key in producto) {
+      if (["id", "nombre", "precio", "descripcion", "imagen"].includes(key)) continue;
+      detalles += `<li class="list-group-item">${key}: ${producto[key]}</li>`;
+    }
+
+    return `
+      <h1>Resultados</h1><br>
+      <div class="col-md-4">
+        <div class="card h-100">
+          <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+          <div class="card-body">
+            <h5 class="card-title">${producto.nombre}</h5>
+            <h6 class="text-muted">$${producto.precio || ""} dólares</h6>
+            <p class="card-text">${producto.descripcion || ""}</p>
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#detalle-${producto.id}" role="button">
+              Ver más
+            </a>
+            <div class="collapse mt-2" id="detalle-${producto.id}">
+              <ul class="list-group list-group-flush">
+                ${detalles}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+// Restaurar vista cuando se borra el texto
+inputBusqueda.addEventListener("input", () => {
+  if (!inputBusqueda.value.trim()) {
+    contenedorResultados.innerHTML = "";
+    mainContent.style.display = "block";
   }
 });
