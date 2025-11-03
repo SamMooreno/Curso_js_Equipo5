@@ -20,19 +20,24 @@ function renderizarProductos(productos) {
     return `
       <div class="col-md-4">
         <div class="card h-100">
-          <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
-          <div class="card-body">
+          <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}" style="height: 200px; object-fit: cover;">
+          <div class="card-body d-flex flex-column">
             <h5 class="card-title">${producto.nombre}</h5>
-            <h6 class="text-muted">$${producto.precio || ""} dolares</h6>
-            <p class="card-text">${producto.descripcion || ""}</p>
+            <h6 class="text-muted">$${producto.precio || ""} dólares</h6>
+            <p class="card-text flex-grow-1">${producto.descripcion || ""}</p>
             
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#detalle-${producto.id}" role="button">
-              Ver más
-            </a>
-            <div class="collapse mt-2" id="detalle-${producto.id}">
-              <ul class="list-group list-group-flush">
-                ${detalles}
-              </ul>
+            <div class="mt-auto">
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#detalle-${producto.id}" role="button">
+                Ver más
+              </a>
+              <button class="btn btn-success" onclick="mostrarDetalleProducto(${producto.id})">
+                Ver detalle
+              </button>
+              <div class="collapse mt-2" id="detalle-${producto.id}">
+                <ul class="list-group list-group-flush">
+                  ${detalles}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
