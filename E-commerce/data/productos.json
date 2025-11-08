@@ -2,6 +2,7 @@
 "laptops": [
   {
     "id": 1,
+    "stock": 10,
     "nombre": "MacBook Air M2",
     "marca": "Apple",
     "procesador": "Apple M2 chip",
@@ -14,6 +15,7 @@
   },
   {
     "id": 2,
+    "stock": 10,
     "nombre": "Dell XPS 13",
     "marca": "Dell",
     "procesador": "Intel Core i7-1260P",
@@ -26,6 +28,7 @@
   },
   {
     "id": 3,
+    "stock": 10,
     "nombre": "Lenovo ThinkPad X1 Carbon",
     "marca": "Lenovo",
     "procesador": "Intel Core i5-1240P",
@@ -38,6 +41,7 @@
   },
   {
     "id": 4,
+    "stock": 10,
     "nombre": "HP Spectre x360",
     "marca": "HP",
     "procesador": "Intel Core i7-1255U",
@@ -50,6 +54,7 @@
   },
   {
     "id": 5,
+    "stock": 10,
     "nombre": "Asus ZenBook 14",
     "marca": "Asus",
     "procesador": "AMD Ryzen 7 6800U",
@@ -62,6 +67,7 @@
   },
   {
     "id": 6,
+    "stock": 10,
     "nombre": "Microsoft Surface Laptop 5",
     "marca": "Microsoft",
     "procesador": "Intel Core i5-1235U",
@@ -75,7 +81,8 @@
 ],
 "celulares": [
   {
-    "id": 1,
+    "id": 7,
+    "stock": 10,
     "nombre": "Google Pixel 8 Pro",
     "marca": "Google",
     "procesador": "Google Tensor G3",
@@ -87,7 +94,8 @@
     "descripcion": "Cámara fotográfica de alta gama con procesamiento de IA, pantalla brillante de 120 Hz y actualizaciones de software garantizadas por 7 años. Ideal para amantes de la fotografía móvil y el ecosistema Android puro."
   },
   {
-    "id": 2,
+    "id": 8,
+    "stock": 10,
     "nombre": "Samsung Galaxy S24 Ultra",
     "marca": "Samsung",
     "procesador": "Snapdragon 8 Gen 3",
@@ -99,7 +107,8 @@
     "descripcion": "El buque insignia de Samsung con S Pen integrado, cámara de 200 MP, pantalla Dynamic AMOLED 2X y rendimiento de élite. Perfecto para creadores, profesionales y entusiastas de la tecnología."
   },
   {
-    "id": 3,
+    "id": 9,
+    "stock": 10,
     "nombre": "Motorola Edge 40 Pro",
     "marca": "Motorola",
     "procesador": "Snapdragon 8 Gen 2",
@@ -111,7 +120,8 @@
     "descripcion": "Diseño elegante con carga ultrarrápida, pantalla curva de 165 Hz y una experiencia Android limpia. Ofrece potencia premium a un precio competitivo."
   },
   {
-    "id": 4,
+    "id": 10,
+    "stock": 10,
     "nombre": "iPhone 15 Pro",
     "marca": "Apple",
     "procesador": "A17 Pro chip",
@@ -123,7 +133,8 @@
     "descripcion": "Construcción en titanio, cámara Pro de 48 MP y el chip A17 Pro más potente hasta la fecha. Ideal para usuarios que buscan rendimiento, calidad fotográfica y ecosistema Apple integrado."
   },
   {
-    "id": 5,
+    "id": 11,
+    "stock": 10,
     "nombre": "Xiaomi 14 Ultra",
     "marca": "Xiaomi",
     "procesador": "Snapdragon 8 Gen 3",
@@ -135,7 +146,8 @@
     "descripcion": "Colaboración con Leica en su sistema de cámaras cuádruple, pantalla LTPO AMOLED de 120 Hz y batería de larga duración. Un monstruo fotográfico y de rendimiento."
   },
   {
-    "id": 6,
+    "id": 12,
+    "stock": 10,
     "nombre": "OnePlus 12",
     "marca": "OnePlus",
     "procesador": "Snapdragon 8 Gen 3",
@@ -149,7 +161,8 @@
 ], 
 "redes": [
   {
-    "id": 1,
+    "id": 13,
+    "stock": 10,
     "nombre": "Cisco Catalyst 2960-L Switch",
     "marca": "Cisco",
     "tipo": "Switch gestionable",
@@ -161,7 +174,8 @@
     "descripcion": "Switch empresarial de Cisco con gestión avanzada, ideal para redes medianas. Ofrece alta disponibilidad, seguridad integrada y fácil administración para entornos profesionales."
   },
   {
-    "id": 2,
+    "id": 14,
+    "stock": 10,
     "nombre": "TP-Link Archer AX90",
     "marca": "TP-Link",
     "tipo": "Router Wi-Fi 6",
@@ -173,7 +187,8 @@
     "descripcion": "Router de alto rendimiento con Wi-Fi 6, ideal para hogares inteligentes y oficinas pequeñas. Soporta decenas de dispositivos simultáneos con baja latencia y cobertura extendida."
   },
   {
-    "id": 3,
+    "id": 15,
+    "stock": 10,
     "nombre": "Patch Panel Cat6 24 Puertos",
     "marca": "Ubiquiti",
     "tipo": "Panel de parcheo",
@@ -185,7 +200,8 @@
     "descripcion": "Panel de parcheo profesional para organización de cableado estructurado. Compatible con redes Gigabit y diseñado para racks estándar. Esencial en instalaciones de red ordenadas y escalables."
   },
   {
-    "id": 4,
+    "id": 16,
+    "stock": 10,
     "nombre": "Cisco Firepower 1010",
     "marca": "Cisco",
     "tipo": "Firewall de próxima generación",
@@ -197,7 +213,8 @@
     "descripcion": "Firewall empresarial con protección avanzada contra amenazas, ideal para PYMES. Incluye inspección profunda de paquetes, prevención de intrusiones y seguridad en la nube."
   },
   {
-    "id": 5,
+    "id": 17,
+    "stock": 10,
     "nombre": "Ubiquiti UniFi U6-Pro Access Point",
     "marca": "Ubiquiti",
     "tipo": "Punto de acceso inalámbrico",
@@ -209,7 +226,8 @@
     "descripcion": "Punto de acceso profesional con Wi-Fi 6, gestión centralizada y diseño elegante. Perfecto para oficinas, hoteles o campus que requieren conectividad estable y de alta densidad."
   },
   {
-    "id": 6,
+    "id": 18,
+    "stock": 10,
     "nombre": "Netgear Nighthawk C7800",
     "marca": "Netgear",
     "tipo": "Módem-router combinado",
@@ -223,7 +241,8 @@
 ], 
 "gadgets": [
   {
-    "id": 1,
+    "id": 19,
+    "stock": 10,
     "nombre": "Sony WH-1000XM5",
     "marca": "Sony",
     "tipo": "Audífonos inalámbricos con cancelación de ruido",
@@ -234,7 +253,8 @@
     "descripcion": "Audífonos premium con cancelación de ruido líder en la industria, sonido de alta resolución y micrófonos avanzados para llamadas claras. Ideales para viajes, trabajo remoto y disfrute de música inmersiva."
   },
   {
-    "id": 2,
+    "id": 20,
+    "stock": 10,
     "nombre": "Teclado Mecánico Razer BlackWidow V4",
     "marca": "Razer",
     "tipo": "Teclado gaming mecánico",
@@ -246,7 +266,8 @@
     "descripcion": "Diseñado para jugadores exigentes, con switches mecánicos duraderos, teclas programables y retroiluminación RGB. Ofrece respuesta rápida, ergonomía y estilo para tu setup de juego o trabajo."
   },
   {
-    "id": 3,
+    "id": 21,
+    "stock": 10,
     "nombre": "Logitech G Pro X Superlight",
     "marca": "Logitech",
     "tipo": "Mouse inalámbrico para gaming",
@@ -258,7 +279,8 @@
     "descripcion": "Mouse ultraligero y preciso, favorito de jugadores profesionales. Con sensor HERO de alto rendimiento, sin cables que limiten tu movimiento y diseño ergonómico para sesiones largas."
   },
   {
-    "id": 4,
+    "id": 22,
+    "stock": 10,
     "nombre": "Cámara Web Logitech Brio 4K",
     "marca": "Logitech",
     "tipo": "Cámara web profesional",
@@ -270,7 +292,8 @@
     "descripcion": "Cámara web de alta gama para streaming, videollamadas y contenido profesional. Entrega imagen nítida incluso en condiciones de poca luz, ideal para creadores y profesionales remotos."
   },
   {
-    "id": 5,
+    "id": 23,
+    "stock": 10,
     "nombre": "Memoria USB SanDisk Extreme Pro 256 GB",
     "marca": "SanDisk",
     "tipo": "Memoria flash USB 3.2",
@@ -282,7 +305,8 @@
     "descripcion": "Memoria USB ultrarrápida y robusta, perfecta para transferir archivos grandes en segundos. Ideal para fotógrafos, estudiantes y profesionales que necesitan movilidad y seguridad de datos."
   },
   {
-    "id": 6,
+  "id": 24,
+  "stock": 10,
   "nombre": "Micrófono Blue Yeti USB",
   "marca": "Blue",
   "tipo": "Micrófono de condensador USB",

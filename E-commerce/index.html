@@ -6,100 +6,74 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
      <link rel="stylesheet" href="/styles/indexStyle.css" />
-     <style>
-        .product-image {
-            max-height: 200px;
-            object-fit: cover;
-        }
-        .card {
-            transition: transform 0.2s;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        .btn-ver-detalle {
-            background-color: #28a745;
-            border-color: #28a745;
-        }
-    </style>
+     
 </head>
 <body>
 
     <header>
-        <div id="navbar_m"></div>
+        <div id="navbar_m">
+            
+        </div>
     </header>
-
-    <!-- Vista de Búsqueda -->
-    <div id="resultado-busqueda" class="row g-4 mt-4" style="display: none;"></div>
-
-    <!-- Vista de Detalle de Producto -->
-    <div id="producto-detalle" class="container py-5" style="display: none;"></div>
-
-    <!-- Contenido Principal -->
-    <main class="container" id="main-content">
+    <div id="resultado-busqueda" class="row g-4 mt-4"></div>
+    <main class="container"  id="main-content">
         <h1>Bienvenido al E-commerce</h1>
-        
-        <!-- Hero -->
+            <!-- Hero -->
         <section class="hero mt-4">
-            <h2>¡Descubre los mejores productos tecnológicos!</h2>
+        <h2>¡Descubre los mejores productos tecnológicos!</h2>
         </section>
 
         <h2>Explora nuestras categorias</h2>
 
         <!-- Categorías destacadas -->
         <section class="row g-4">
-            <div class="col-md-3">
-                <div class="card categoria-card">
-                    <a href="laptops.html">
-                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Laptops">
-                    </a>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Laptops</h5>
-                    </div>
-                </div>
+        <div class="col-md-3">
+            <div class="card categoria-card">
+            <a href="laptops.html">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Laptops">
+            </a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Laptops</h5>
             </div>
+            </div>
+        </div>
 
-            <div class="col-md-3">
-                <div class="card categoria-card">
-                    <a href="celulares.html">
-                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Celulares">
-                    </a>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Celulares</h5>
-                    </div>
-                </div>
+        <div class="col-md-3">
+            <div class="card categoria-card">
+            <a href="celulares.html">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=500&q=60" class="card-img-top" alt="Celulares">
+            </a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Celulares</h5>
             </div>
+            </div>
+        </div>
 
-            <div class="col-md-3">
-                <div class="card categoria-card">
-                    <a href="redes.html">
-                        <img src="https://d3a9n3quhe2vf1.cloudfront.net/img/article/redes-informaticas-que-son-y-cuales-sus-tipos.webp" class="card-img-top" alt="Redes">
-                    </a>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Redes</h5>
-                    </div>
-                </div>
+        <div class="col-md-3">
+            <div class="card categoria-card">
+            <a href="redes.html">
+            <img src="https://d3a9n3quhe2vf1.cloudfront.net/img/article/redes-informaticas-que-son-y-cuales-son-sus-tipos.webp" class="card-img-top" alt="Redes">
+            </a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Redes</h5>
             </div>
+            </div>
+        </div>
 
-            <div class="col-md-3">
-                <div class="card categoria-card">
-                    <a href="gadgets.html">
-                        <img src="https://esw.com/wp-content/uploads/2023/02/global-consumer-electronics.jpg" class="card-img-top" alt="Gadgets">
-                    </a>
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Gadgets</h5>
-                    </div>
-                </div>
+        <div class="col-md-3">
+            <div class="card categoria-card">
+            <a href="gadgets.html">
+            <img src="https://esw.com/wp-content/uploads/2023/02/global-consumer-electronics.jpg" class="card-img-top" alt="Gadgets">
+            </a>
+            <div class="card-body text-center">
+                <h5 class="card-title">Gadgets</h5>
             </div>
+            </div>
+        </div>
         </section>
 
-        <!-- Productos Destacados -->
-        <section class="mt-5">
-            <h2>Productos Destacados</h2>
-            <div id="productos-destacados" class="row g-4 mt-3">
-                <!-- Los productos destacados se cargarán aquí -->
-            </div>
-        </section>
+        
+
     </main>
 
     <footer>
@@ -108,7 +82,8 @@
 
     <script src="js/nav.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/producto.js"></script>
+    <script src="js/login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -1,106 +1,129 @@
-function verificarSesionActiva() {
-  const usuario = localStorage.getItem("nombre");
-  const paginaActual = window.location.pathname.split("/").pop();
-
-  if (!usuario && paginaActual === "carrito.html") {
-    alert("Debes iniciar sesión para acceder al carrito.");
-    window.location.href = "index.html";
-  }
-}
-
-// ============================
-// Al cargar la página
-
 document.addEventListener("DOMContentLoaded", () => {
-  verificarSesionActiva(); 
+    
+    // VERIFICACIÓN DE SESIÓN
+    if (localStorage.getItem("session") !== "si") {
+        alert("Debes iniciar sesión para ver tu carrito.");
+        window.location.href = "login.html";
+        return; 
+    }
+    cargarYRenderizarCarrito();
 
-  const carrito = JSON.parse(localStorage.getItem("cart")) || [];
-  getCart(carrito);
-  total(carrito);
+    document.querySelector("#vaciar-carrito").addEventListener("click", vaciarCarritoConConfirmacion);
+    document.querySelector("#finalizar-compra").addEventListener("click", finalizarCompra);
 });
 
-// ============================
-//  Renderiza los productos del carrito
 
-function getCart(cards) {
-  const contenedor = document.querySelector("#carrito-contenedor");
+async function cargarYRenderizarCarrito() {
+    const carritoContenedor = document.querySelector("#carrito-contenedor");
+    const btnVaciar = document.querySelector("#vaciar-carrito");
+    const btnFinalizar = document.querySelector("#finalizar-compra");
+    const carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
+    if (carritoGuardado.length === 0) {
+        carritoContenedor.innerHTML = `<div class="alert alert-info">Tu carrito está vacío.</div>`;
+        calcularTotal([]);
+        btnVaciar.disabled = true;
+        btnFinalizar.disabled = true;
+        return;
+    }
 
-  if (!cards.length) {
-    contenedor.innerHTML = `<p class="text-muted text-center mt-3">Tu carrito está vacío </p>`;
-    return;
-  }
+    btnVaciar.disabled = false;
+    btnFinalizar.disabled = false;
+    const respuesta = await fetch("./data/productos.json");
+    const datosJSON = await respuesta.json();
+    let todosLosProductos = [];
+    for (let categoria in datosJSON) {
+        todosLosProductos = todosLosProductos.concat(datosJSON[categoria]);
+    }
+    const carritoCompleto = carritoGuardado.map(itemGuardado => {
+        const productoCompleto = todosLosProductos.find(p => p.id === itemGuardado.id);
+        return {
+            ...productoCompleto, 
+            cantidad: itemGuardado.cantidad 
+        };
+    });
+    renderizarListaProductos(carritoCompleto);
+    calcularTotal(carritoCompleto);
+}
 
-  const list = cards
-    .map(
-      (card) => `
-      <div class="card border shadow-sm mb-3">
-        <div class="card-body">
-          <div class="d-flex align-items-start border-bottom pb-3">
-            <div class="me-4">
-              <img src="${card.product.imagen}" class="img-fluid rounded" alt="${card.product.nombre}" width="100" style="height: 100px; object-fit: cover;">
+function renderizarListaProductos(carrito) {
+    const contenedor = document.querySelector("#carrito-contenedor");
+    
+    const html = carrito.map(item => `
+        <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+                <div class="d-flex align-items-center">
+                    <img src="${item.imagen}" alt="${item.nombre}" class="img-fluid rounded me-3" style="width: 100px; height: 100px; object-fit: cover;">
+                    <div class="flex-grow-1">
+                        <h5 class="card-title">${item.nombre}</h5>
+                        <p class="card-text text-muted">Cantidad: ${item.cantidad}</p>
+                    </div>
+                    <div class="text-end me-3">
+                        <p class="text-muted mb-0">Precio Unitario</p>
+                        <h5>$${item.precio}</h5>
+                    </div>
+                    <div class="text-end">
+                        <p class="text-muted mb-0">Subtotal</p>
+                        <h5 class="text-primary">$${(item.precio * item.cantidad).toFixed(2)}</h5>
+                    </div>
+                    <button class="btn btn-outline-danger btn-sm ms-4 btn-eliminar" data-id="${item.id}">
+                        &times;
+                    </button>
+                </div>
             </div>
-            <div class="flex-grow-1 overflow-hidden">
-              <h5 class="text-truncate font-size-18">${card.product.nombre}</h5>
-              <div class="row">
-                <div class="col-md-4">
-                  <p class="text-muted mb-1">Precio</p>
-                  <h5>$${card.product.precio}</h5>
-                </div>
-                <div class="col-md-4">
-                  <p class="text-muted mb-1">Cantidad</p>
-                  <h5>${card.quantity}</h5>
-                </div>
-                <div class="col-md-3">
-                  <p class="text-muted mb-1">Total</p>
-                  <h5>$${card.product.precio * card.quantity}</h5>
-                </div>
-                <div class="col-md-1 text-end">
-                  <p class="text-muted mb-1">Eliminar</p>
-                  <button class="btn btn-sm btn-outline-danger" onclick="removeItem(${card.product.id})">X</button>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>`
-    )
-    .join("");
+    `).join("");
 
-  contenedor.innerHTML = list;
+    contenedor.innerHTML = html;
+    agregarListenersEliminar();
 }
 
-// ============================
-//  Calcula el total general
-function total(cards) {
-  const cartTotal = document.querySelector("#cart-total");
-  const totalValue = cards.reduce(
-    (acc, item) => acc + item.product.precio * item.quantity,
-    0
-  );
-  cartTotal.textContent = "$" + totalValue;
+//Calcula el total de la compra.
+function calcularTotal(carrito) {
+    const totalSpan = document.querySelector("#carrito-total");
+    
+    const total = carrito.reduce((acc, item) => {
+        return acc + (item.precio * item.cantidad);
+    }, 0); 
+
+    totalSpan.textContent = `$${total.toFixed(2)}`;
 }
 
-// ============================
-//  Eliminar un producto
-
-function removeItem(id) {
-  let cards = JSON.parse(localStorage.getItem("cart")) || [];
-  const newCart = cards.filter((item) => item.product.id !== id);
-  localStorage.setItem("cart", JSON.stringify(newCart));
-  getCart(newCart);
-  total(newCart);
+//Agrega un listener a cada botón de "eliminar"
+function agregarListenersEliminar() {
+    document.querySelectorAll('.btn-eliminar').forEach(boton => {
+        boton.addEventListener('click', (e) => {
+            const id = parseInt(e.target.dataset.id);
+            eliminarItemDelCarrito(id);
+        });
+    });
 }
 
-// ============================
-//  Vaciar el carrito completo
-
-function clearCart() {
-  localStorage.setItem("cart", JSON.stringify([]));
-  getCart([]);
-  total([]);
+// Elimina un item específico del localStorage y recarga la vista
+function eliminarItemDelCarrito(id) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const nuevoCarrito = carrito.filter(item => item.id !== id);
+    localStorage.setItem("carrito", JSON.stringify(nuevoCarrito));
+    window.dispatchEvent(new CustomEvent("carritoActualizado"));
+    cargarYRenderizarCarrito();
 }
 
-// ============================
-//  Botón: Vaciar carrito
+//Función para el botón "Vaciar Carrito" (PREGUNTA AL USUARIO)
+function vaciarCarritoConConfirmacion() {
+    if (confirm("¿Estás seguro de que quieres vaciar tu carrito?")) {
+        limpiarCarritoAutomaticamente();
+    }
+}
 
-document.querySelector("#vaciar-carrito").addEventListener("click", clearCart);
+//Función para el botón "Finalizar Compra" 
+
+function finalizarCompra() {
+    alert("¡Gracias por tu compra!");
+    limpiarCarritoAutomaticamente();
+}
+
+// Limpia el localStorage y actualiza la vista.
+function limpiarCarritoAutomaticamente() {
+    localStorage.setItem("carrito", JSON.stringify([]));
+    window.dispatchEvent(new CustomEvent("carritoActualizado"));
+    cargarYRenderizarCarrito();
+}
