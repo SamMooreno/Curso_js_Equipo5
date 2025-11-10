@@ -27,7 +27,7 @@ function renderizarProductos(productos) {
             <p class="card-text">${producto.descripcion || ""}</p>
 
             ${(localStorage.getItem("session") === "si")
-              ? `<a href="producto.html?id=${producto.id}" class="btn btn-success">Comprar</a>`
+              ? `<a href="producto.html?id=${producto.id}" class="btn btn-success" id="btn-success">Comprar</a>`
               : `<a href="login.html" class="btn btn-secondary">Inicia sesión para comprar</a>`
             }
             
