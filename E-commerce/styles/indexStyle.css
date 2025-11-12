@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom right, #f3f4f6, #e2e8f0);
+    background: linear-gradient(to bottom right, #fcfdfd, #d4d4dd);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -58,7 +58,7 @@ h1 {
 footer {
     text-align: center;
     padding: 20px;
-    background: #0d6efd;
+    background: #0E2780;
     color: white;
     margin-top: 40px;
 }
@@ -124,3 +124,17 @@ footer {
   display: block;
 }
 
+#btn-decrease {
+  background-color: #1C4EFF!important; 
+  border-color: #1C4EFF !important;
+}
+
+#btn-increase{
+  background-color: #1C4EFF !important; 
+  border-color: #1C4EFF !important; 
+  }
+#btn-success{
+  background-color: #1C4EFF !important; 
+  border-color: #1C4EFF !important; 
+
+}
