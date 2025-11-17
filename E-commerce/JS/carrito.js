@@ -10,6 +10,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector("#vaciar-carrito").addEventListener("click", vaciarCarritoConConfirmacion);
     document.querySelector("#finalizar-compra").addEventListener("click", finalizarCompra);
+    document.querySelector("#checkout-btn").addEventListener("click", async function() {
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        const user = localStorage.getItem("nombre") || "usuario";
+        if (carrito.length === 0) return;
+
+        try {
+            const response = await fetch("https://691b71d82d8d78557572da59.mockapi.io/orders", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    createdAt: new Date().toISOString(),
+                    user: user,
+                    items: carrito
+                })
+            });
+            if (!response.ok) throw new Error("Error en la orden");
+            const data = await response.json();
+            Swal.fire({
+                icon: 'success',
+                title: '¡Orden creada!',
+                html: `Usuario: <b>${data.user}</b><br>Número de orden: <b>${data.id}</b>`
+            });
+            localStorage.setItem("carrito", JSON.stringify([]));
+            cargarYRenderizarCarrito();
+        } catch (error) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error al crear la orden',
+                text: 'Intenta de nuevo más tarde'
+            });
+        }
+    });
 });
 
 
@@ -18,16 +50,19 @@ async function cargarYRenderizarCarrito() {
     const btnVaciar = document.querySelector("#vaciar-carrito");
     const btnFinalizar = document.querySelector("#finalizar-compra");
     const carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
+    const btnCheckout = document.querySelector("#checkout-btn");
     if (carritoGuardado.length === 0) {
         carritoContenedor.innerHTML = `<div class="alert alert-info">Tu carrito está vacío.</div>`;
         calcularTotal([]);
         btnVaciar.disabled = true;
         btnFinalizar.disabled = true;
+        if (btnCheckout) btnCheckout.disabled = true;
         return;
     }
 
     btnVaciar.disabled = false;
     btnFinalizar.disabled = false;
+    if (btnCheckout) btnCheckout.disabled = false;
     const respuesta = await fetch("./data/productos.json");
     const datosJSON = await respuesta.json();
     let todosLosProductos = [];

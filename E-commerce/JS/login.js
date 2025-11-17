@@ -18,8 +18,18 @@ form.addEventListener("submit", async (event) => {
     if (usuarioEncontrado){
         localStorage.setItem("session", "si");
         localStorage.setItem("nombre", usuarioEncontrado.nombre);
-        location.href = "index.html";
+        Swal.fire({
+            icon: 'success',
+            title: '¡Bienvenido!',
+            text: 'Inicio de sesión exitoso'
+        }).then(() => {
+            location.href = "index.html";
+        });
     }else{
-        alert("Usuario no existente");
+        Swal.fire({
+            icon: 'error',
+            title: 'Usuario no existente',
+            text: 'Verifica tus datos e intenta de nuevo'
+        });
     }
 });
