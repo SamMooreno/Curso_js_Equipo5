@@ -29,7 +29,8 @@ form.addEventListener("submit", async (event) => {
         Swal.fire({
             icon: 'error',
             title: 'Usuario no existente',
-            text: 'Verifica tus datos e intenta de nuevo'
+            text: 'Verifica tus datos e intenta de nuevo',
+            scrollbarPadding: false,
         });
     }
 });
