@@ -1,18 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
     // VERIFICACIÓN DE SESIÓN
     if (localStorage.getItem("session") !== "si") {
         alert("Debes iniciar sesión para ver tu carrito.");
         window.location.href = "login.html";
-        return; 
+        return;
     }
     cargarYRenderizarCarrito();
-
- document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#vaciar-carrito").addEventListener("click", vaciarCarritoConConfirmacion);
-
     document.querySelector("#finalizar-compra").addEventListener("click", finalizarCompra);
-});
 
 
 // -----------------------------
